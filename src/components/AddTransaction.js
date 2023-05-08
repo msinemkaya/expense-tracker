@@ -16,6 +16,7 @@ export default function AddTransaction() {
         <div className='form-control'>
           <label htmlFor='amount'>
             Amount <br />
+            (negative - expense, positive - income)
           </label>
           <input type='number' placeholder='Enter amount...' value={amount} onChange={({ target }) => setAmount(target.value)}/>
         </div>
