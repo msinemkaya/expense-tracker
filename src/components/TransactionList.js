@@ -1,4 +1,5 @@
 import useGlobalContex from '../hooks/use-global-context'
+import Transaction from './Transaction';
 
 export default function TransactionList(){
 
@@ -8,10 +9,8 @@ export default function TransactionList(){
     <>
       <h3>History</h3>
       <ul className='list' id='list'>
-        {state.transactions.map((transaction, index) => (
-          <li className='plus' key={index}>
-            {transaction.text} <span>$</span> <button className='delete-btn'>x</button>
-          </li>
+        {state.transactions.map((transaction) => (
+          <Transaction transaction={transaction} key={transaction.id} />
         ))}
       </ul>
     </>
